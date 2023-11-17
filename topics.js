@@ -19,4 +19,15 @@ const getTopicList = async () => {
   }
 };
 
+/**
+ *  @param {String[]} topics : ["topic_name1", "topic_name2"]
+ *  @param {Number} timeout: 5000
+ */
+const deleteTopics = async (topics, timeout) => {
+  await admin.deleteTopics({
+    topics,
+    timeout,
+  });
+};
+
 getTopicList();
